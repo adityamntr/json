@@ -1,0 +1,24 @@
+{
+    "condition": "or",
+    "rules": [
+        {
+            "label": "Category",
+            "field": "Category",
+            "operator": "equal",
+            "type": "string",
+            "value": "Laptop"
+        },
+        {
+            "condition": "and",
+            "rules": [
+                {
+                    "label": "Name",
+                    "field": "Name",
+                    "operator": "contains",
+                    "type": "string",
+                    "value": "a"
+                }
+            ]
+        }
+    ]
+}

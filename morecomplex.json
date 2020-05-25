@@ -1,0 +1,43 @@
+{
+    "condition": "and",
+    "rules": [
+        {
+            "condition": "or",
+            "rules": [
+                {
+                    "label": "Task ID",
+                    "field": "TaskID",
+                    "operator": "equal",
+                    "type": "number",
+                    "value": 23
+                },
+                {
+                    "label": "Invoice No",
+                    "field": "InvoiceNo",
+                    "operator": "contains",
+                    "type": "string",
+                    "value": "65"
+                }
+            ]
+        },
+        {
+            "condition": "or",
+            "rules": [
+                {
+                    "label": "Name",
+                    "field": "Name",
+                    "operator": "startswith",
+                    "type": "string",
+                    "value": "A"
+                },
+                {
+                    "label": "Status",
+                    "field": "Status",
+                    "operator": "equal",
+                    "type": "string",
+                    "value": "Done"
+                }
+            ]
+        }
+    ]
+}

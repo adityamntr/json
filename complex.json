@@ -1,0 +1,31 @@
+{
+    "condition": "and",
+    "rules": [
+        {
+            "label": "Category",
+            "field": "Category",
+            "operator": "equal",
+            "type": "string",
+            "value": "Laptop"
+        },
+        {
+            "condition": "or",
+            "rules": [
+                {
+                    "label": "Name",
+                    "field": "Name",
+                    "operator": "contains",
+                    "type": "string",
+                    "value": "a"
+                },
+                {
+                    "label": "Serial No",
+                    "field": "SerialNo",
+                    "operator": "notequal",
+                    "type": "string",
+                    "value": "234"
+                }
+            ]
+        }
+    ]
+}
