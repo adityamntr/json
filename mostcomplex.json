@@ -1,0 +1,57 @@
+{
+    "condition": "or",
+    "rules": [
+        {
+            "label": "Task ID",
+            "field": "TaskID",
+            "operator": "greaterthanorequal",
+            "type": "number",
+            "value": 23
+        },
+        {
+            "condition": "or",
+            "rules": [
+                {
+                    "label": "Category",
+                    "field": "Category",
+                    "operator": "endswith",
+                    "type": "string",
+                    "value": "minerva"
+                },
+                {
+                    "label": "Invoice No",
+                    "field": "InvoiceNo",
+                    "operator": "isnotnull",
+                    "type": "string",
+                    "value": null
+                }
+            ]
+        },
+        {
+            "condition": "and",
+            "rules": [
+                {
+                    "label": "Task ID",
+                    "field": "TaskID",
+                    "operator": "notbetween",
+                    "type": "number",
+                    "value": [
+                        45,
+                        90
+                    ]
+                },
+                {
+                    "label": "Status",
+                    "field": "Status",
+                    "operator": "in",
+                    "type": "string",
+                    "value": [
+                        "Assigned",
+                        "In-repair",
+                        "Pending"
+                    ]
+                }
+            ]
+        }
+    ]
+}
