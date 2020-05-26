@@ -2,23 +2,18 @@
     "condition": "or",
     "rules": [
         {
-            "label": "Category",
-            "field": "Category",
-            "operator": "equal",
-            "type": "string",
-            "value": "Laptop"
+            "label": "Task ID",
+            "field": "TaskID",
+            "operator": "greaterthanorequal",
+            "type": "number",
+            "value": 23
         },
         {
-            "condition": "and",
-            "rules": [
-                {
-                    "label": "Name",
-                    "field": "Name",
-                    "operator": "contains",
-                    "type": "string",
-                    "value": "a"
-                }
-            ]
+            "label": "Name",
+            "field": "Name",
+            "operator": "startswith",
+            "type": "string",
+            "value": "A"
         }
     ]
 }
