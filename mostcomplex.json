@@ -2,33 +2,29 @@
     "condition": "or",
     "rules": [
         {
-            "label": "Task ID",
-            "field": "TaskID",
-            "operator": "greaterthanorequal",
-            "type": "number",
-            "value": 23
-        },
-        {
-            "condition": "or",
+            "condition": "and",
             "rules": [
                 {
-                    "label": "Category",
-                    "field": "Category",
-                    "operator": "endswith",
+                    "label": "Name",
+                    "field": "Name",
+                    "operator": "notin",
                     "type": "string",
-                    "value": "minerva"
+                    "value": [
+                        "Lenovo Yoga",
+                        "Acer Aspire"
+                    ]
                 },
                 {
                     "label": "Invoice No",
                     "field": "InvoiceNo",
-                    "operator": "isnotnull",
+                    "operator": "isnotempty",
                     "type": "string",
                     "value": null
                 }
             ]
         },
         {
-            "condition": "and",
+            "condition": "or",
             "rules": [
                 {
                     "label": "Task ID",
@@ -36,20 +32,16 @@
                     "operator": "notbetween",
                     "type": "number",
                     "value": [
-                        45,
-                        90
+                        23,
+                        78
                     ]
                 },
                 {
                     "label": "Status",
                     "field": "Status",
-                    "operator": "in",
+                    "operator": "contains",
                     "type": "string",
-                    "value": [
-                        "Assigned",
-                        "In-repair",
-                        "Pending"
-                    ]
+                    "value": "YES"
                 }
             ]
         }
